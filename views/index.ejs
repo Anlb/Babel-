@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>BABEL</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    <meta content="IE=edge" http-equiv=X-UA-Compatible>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <script src="https://kit.fontawesome.com/7e5440b328.js" crossorigin="anonymous"></script>
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <!--[if IE 7]>
+        <link href="css/stylesie7.css" rel="stylesheet" type="text/css" media="screen">
+    <![endif]-->
+</head>
+<body>
+<main>
+  <div id="haut" class="containercolor">
+   <header>
+<!--//---------------------------------------------------------cookie-->
+    <div id="js-cookie-box" class="cookie-box cookie-box--hide">
+      En poursuivant votre navigation sur ce site, vous acceptez l'utilisation de cookies 🍪 ! <span id="js-cookie-button" class="cookie-button">Allez pourquoi pas</span>
+    </div>
+    
+<!--//---------------------------------------------------------pop-up-inscription-->
+<div class="pop-up-inscription">
+  <div class="profil-close-inscription flex">
+      <span></span>
+  </div>
+  <div class="photo-inscription">
+    <div class="lueur-inscription">
+    </div>
+    <span></span>
+  </div>
+  <h3>Creer un nouveaux compte</h3>
+  <div class="container-input-inscription flex">
+    
+    <input type="text" placeholder="Adresse Electronique">
+    <input type="password" placeholder="Mot de passe">
+    <input type="password" placeholder="Retapez le mot de passe">
+  
+  </div>
+  <div class="choix-inscription flex">
+    <h2>rester connecté</h2>
+    <div class="checke flex">
+      <span><i class="fas fa-check"></i></span>
+    </div>
+    <span></span>
+  </div>
+  <div class="container-button flex">
+    <div class="inscrip">inscrivez-vous</div>
+    
+  </div>
+  <div class="point flex">
+    <input type="checkbox" name="politique">
+    <label for="politique">J’ai lu et j’accepte la <a href=""> politique de confidentialité.</a></label>
+    <input type="checkbox" name="new">
+    <label for="new">Je m’abonne à la newsletter</label>
+  </div>
+</div>
+<!--//
+
+
+  ---------------------------------------------------------pop-up-connection-->
+    <div class="pop-up-profil">
+      <div class="profil-close flex">
+          <span></span>
+      </div>
+      
+      <div class="photo">
+        <div class="lueur">
+        </div>
+        <span></span>
+      </div>
+      
+      <h3>Connectez vous à votre compte</h3>
+      <div class="container-input flex">
+        <% if(admin === false) { %>
+    
+
+    <form class="flex" action="" method="POST">
+        <input type="text" placeholder="Adresse Electronique" name="email">
+        <input type="password" placeholder="Mot de passe" name="pass">
+        <input type="submit" value="Identifiez-vous">
+    </form>
+
+
+
+
+        <a href="">Mot de passe oublié?</a>
+        
+      </div>
+      <div class="choix flex">
+        <h2>rester connecté</h2>
+        <div class="check flex">
+          <span><i class="fas fa-check"></i></span>
+        </div>
+        <span></span>
+      </div>
+      <div class="container-button flex">
+       
+        <h3>vous n'avez pas encore de compte?</h3>
+        <div class="ins">inscrivez-vous</div>
+
+        <%  } else { %>
+
+            <style>
+              h3{
+                 display: none;
+                 }
+                  .pop-up-profil{
+                    height: 60vh;
+                    width: 300px;
+                  }
+                  .pop-up-profil .photo div.lueur{
+                    top: 21%;
+                    height: 200px;
+                    width: 200px;
+                  }
+                  .pop-up-profil .photo span{
+                    background-image: url(../img/pikachu.jpg);
+                    background-size: cover;
+                    background-position : center ;
+                    top: 34%;
+                    height: 150px;
+                    width: 150px;
+                     }
+                     .pop-up-profil .container-input {
+                      align-items: center; 
+                     }</style>
+            <div class="container-connecter flex">
+            <h2>Bienvenue,<b> Pikachu !</b></h2>
+            <p>pikachu@gmail.com</p>
+            <div class="container-btn-log flex">
+            <a class="btn-log" href=""><i class="fas fa-cogs"></i>mes paramètres</a>
+            <a class="btn-log" href="favoris"><i class="fas fa-heart"></i>mes favoris</a>
+          </div>
+            <form class="flex" action="" method="POST">
+              <input type="submit" value="déconnexion" class="deco">
+            </form>
+          </div>
+          <% } %>
+        </div>
+
+    </div>
+<!--//--------------------------------------burger----------------------------------//-->
+ <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+ 
+ 
+  <!--::--------------------------------NAV----------------------------------------->
+
+ <%- include('navigation'); -%>
+
+<!--::-----------------------------fin-NAV----------------------------------------->
+ 
+  
+  <h1>babel</h1>
+  <% if(admin === false) { %>
+  <div class="profil">
+      <h3>SE CONNECTER</h3>
+      <div class="image"></div>
+  </div>
+<%} else {%>
+  
+  <div class="profil">
+    <h2 >Bonjour, Pikachu !</h2>
+    <div  class="image" style="background-image: url(../img/pikachu.jpg);"></div>
+  </div>
+  <%}%>
+   </header>
+   <div  class="carousel">
+       <div class="imagequatre blur">
+           <figure></figure>
+       </div>
+       <div  class="imagedeux second">
+           <figure></figure>
+       </div>
+       <div  class="imagetrois blur-two">
+           <figure></figure>
+       </div>
+       <div  class="imageun first flex">
+           <a href="detail"></a>
+           <div class="container-text">
+           <div class="text">
+              
+               <h1>SKY DOLL</h1>
+               <p>Nisi mihi Phaedrum, inquam, tu mentitum aut Zenonem putas, quorum utrumque audivi, cum mihi nihil sane praeter sedulitatem probarent, omnes mihi Epicuri sententiae satis notae sunt. atque eos, quos nominavi, cum Attico nostro frequenter audivi, cum miraretur ille quidem . </p>
+               <div class="chevron"><span></span></div>
+           </div>
+          </div>
+       </div>
+       
+       <div class="suivantdroit"><span></span></div>
+       <div class="suivantgauche"><span></span></div>
+       
+   </div>
+  <div class="recherche flex">
+      <div class="container-input">
+         <input type="text" placeholder="RECHERCHE...">
+       <label for="search"><i class="fas fa-search"></i></label>
+       </div>
+
+      </div>
+      <div class="hautbar"><a class="hautstyle" href="#haut"><span class="iconify" data-icon="eva:arrow-ios-upward-fill" data-inline="false"></span></a></div>
+<%- include('footer'); -%>
+   
+   </div>
+   
+    
+</main>
+</body>
+<script src="front.js"></script>
+</html>
