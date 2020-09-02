@@ -179,6 +179,7 @@ a {
   background: #30d4de 100%;
   mix-blend-mode: normal;
   border-radius: 2px;
+  overflow: hidden;
 }
 .containercolor header {
   justify-content: center;
@@ -1800,7 +1801,7 @@ section.commentaire article.commentaire-trois .notation-commentaires .deux {
   width: 100%;
   top: 0px;
   left: -2100px;
-  z-index: 30;
+  z-index: 300!important;
   transition: all 0.5s;
 }
 #nave a {
@@ -2105,6 +2106,11 @@ footer {
   margin-bottom: -6px;
   margin-right: 15px;
 }
+.iconify.animation {
+  transition: all 0.6s;
+  animation: infinite linear bopbop 3s;
+  position: absolute;
+}
 .hautbar,
 .hautstyle {
   display: flex;
@@ -2113,6 +2119,8 @@ footer {
   align-items: center;
   flex-direction: column;
   width: 100%;
+  padding-top: 50px;
+  position: relative;
   background: #30d4de 100%;
   color: #fff;
   font-family: Roboto;
@@ -2124,6 +2132,17 @@ footer {
 .hautstyle {
   margin-bottom: 10px;
 }
+@keyframes bopbop {
+  0% {
+    top: 20px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 20px;
+  }
+}
 body.formulaire {
   overflow: hidden;
 }
@@ -2131,13 +2150,7 @@ body.formulaire {
   display: flex;
   flex-direction: column;
   color: #fff;
-  padding: 90px;
-}
-h1 {
-  max-width: 30%;
-  font-size: 30px;
-  font-weight: 300;
-  text-transform: uppercase;
+  padding: 80px;
 }
 .informationtext {
   max-width: 30%;

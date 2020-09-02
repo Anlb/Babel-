@@ -8,11 +8,13 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    
   </head>
-  
+  <%- include('navigation'); -%>
   <body class="formulaire">
     
   <div class="fondbleu">
+   
     <div class="textbox">
+     
     <h1>Contactez-nous</h1>
      <p class="informationtext">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam placerat est eget ligula cursus pellentesque.</p>
     </div>
@@ -25,20 +27,18 @@
     <div class="bloccontact3"><span class="iconify" data-icon="fa-brands:facebook-f" data-inline="false"></span></div>
     </div>
 </div>
-    
-  
-      
    <div class="flexblocmessage">
      <div class="blocmessage">
      <div class="titreenvoi">Envoyez un message</div>
+     <form action="index" method="POST">
      <input  class="styleformulaire" placeholder="Nom" type="text">
      <input class="styleformulaire" placeholder="Email" type="email">
      <textarea class="stylemessageformulaire" placeholder="Message" rows="5" cols="43"></textarea>
-     <button class="button">Soumettre</button>
+     
+     <button type="submit" class="button">Soumettre</button>
+    </form>
      <!--  name="submit" type="submit" id="contact-submit" --> 
        
   </div>
   </div>
-  
-   
   </body>

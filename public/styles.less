@@ -110,8 +110,6 @@ a {
 
 /* ------------------------------- END RECURENTES -- */
 
- 
-
 .cookie-box {
     position: fixed;
     left: 0;
@@ -139,6 +137,8 @@ a {
     letter-spacing: 1px;
     background-image: linear-gradient(175deg, rgba(48, 212, 222, 4) 0%, rgba(48, 212, 222, 0.2) 100%);
   }
+
+
   
 
 
@@ -215,7 +215,7 @@ a {
     // box-shadow: 1px 5px 3px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
     // height: 100vh;
-    // overflow: hidden;
+    overflow: hidden;
 
 
     header {
@@ -2173,7 +2173,7 @@ section.commentaire {
     width: 100%;
     top: 0px;
     left: -2100px;
-    z-index: 30;
+    z-index: 300!important;
     transition: all 0.5s;
 
     a {
@@ -2385,8 +2385,8 @@ section.commentaire {
         background-color: #84DAE2;
         height:165px;
         width: 100%;
-        justify-content: center;
-        align-items: center;
+        justify-content : center;
+        align-items:center;
         h1{
             padding-top: 20px;
             color: white;
@@ -2557,6 +2557,12 @@ footer {
         height: 23px;
         margin-bottom:-6px;
         margin-right:15px;
+        &.animation{
+                transition: all 0.6s;
+            animation: infinite linear bopbop 3s;
+            position: absolute;
+               
+        }
       }
       
       .hautbar, .hautstyle {
@@ -2566,7 +2572,8 @@ footer {
       align-items:center;
       flex-direction:column;
       width:100%;
-    //   padding-top: 50px;
+      padding-top: 50px;
+      position: relative;
     //   background:#84DAE9;
     background: rgba(48, 212, 222, 4) 100%;
       color:#fff;
@@ -2580,7 +2587,19 @@ footer {
       .hautstyle {
         margin-bottom:10px;
         }
-
+        @keyframes bopbop{
+            0%{
+                top: 20px;
+        
+            }
+            50%{
+               top: -10px;
+                
+            }
+            100%{
+                top: 20px;
+            }
+        }
 
 //------------------------------formulaire--------------//
 body.formulaire{
@@ -2590,16 +2609,16 @@ body.formulaire{
     display:flex;
     flex-direction:column;
     color: #fff;
-    padding:90px;
+    padding:80px;
   }
   
-  h1 {
-  max-width:30%;    
-  font-size:30px;
-  font-weight:300;
-  text-transform: uppercase;
+//   h1 {
+//   max-width:30%;    
+//   font-size:30px;
+//   font-weight:300;
+//   text-transform: uppercase;
   
-  }
+//   }
   
   
   .informationtext { 

@@ -56,3 +56,5 @@
         isOpenI.classList.remove('active-menu-inscription');
     }
     
+
+ 
